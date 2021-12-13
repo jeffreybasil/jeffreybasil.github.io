@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 Homework</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #394a51;
+      }
+
+      h2 {
+        font-weight: normal;
+      }
+
+      .weather {
+          margin: auto;
+          width: 175px;
+      }
+
+      .day {
+          padding: 10px 0px;
+          transition: .2s ease-in-out;
+      }
+
+      .day:hover {
+          background-color: #fbf2d5;
+          border-radius: 5px;
+      }
+     
+      .header-emoji {
+          margin-top: 20px;
+      }
+      .day-of-week {
+        font-size: 14px;
+      }
+
+      .day-name {
+          color: #7fa99b;
+          font-weight: bold;
+      }
+
+      .temp {
+        font-size: 12px;
+        margin: 10px 0px 0px 0px;
+      }
+
+      .low-temp {
+        font-weight: bold;
+      }
+
+      button {
+          color: #394a51;
+          background-color: #fbf2d5;
+          border: 2px solid #fbf2d5;
+          border-radius: 5px;
+          font-size: 12px;
+          font-weight: bold;
+          margin: 20px 0px;
+          padding: 10px;
+          transition: .2s ease-in-out;
+      }
+
+      button:hover {
+          background-color:#7fa99b;
+          border-color: #7fa99b;
+          color: #fbf2d5;
+      }
+
+      p{
+          font-size: 10px;
+          font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-emoji">🌞🌱💧</div> 
+    <h1>Currently 68° in #712</h1>
+    <h2>70°&nbsp;&nbsp;/&nbsp;&nbsp;<span class="low-temp">62°</span></h2>
+    <div class="weather">
+        <div class="day">
+            <div class="day-of-week">☁️&nbsp;&nbsp;<span class="day-name">Tomorrow&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <div class="temp">65°&nbsp;&nbsp;/&nbsp;&nbsp;<span class="low-temp">64°</span>
+        </div>
+     </div>
+         <div class="day">
+            <div class="day-of-week">🌞&nbsp;&nbsp;<span class="day-name">Monday&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <div class="temp">71°&nbsp;&nbsp;/&nbsp;&nbsp;<span class="low-temp">62°</span>
+            </div>
+        </div>
+        <div class="day">
+            <div class="day-of-week">💦&nbsp;&nbsp;<span class="day-name">Tuesday&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <div class="temp">69°&nbsp;&nbsp;/&nbsp;&nbsp;<span class="low-temp">65°</span>
+        </div>
+    </div>
+    <button>Change Sill</button>
+    <p>Coded by Jackie S.</p>
+  </body>
+</html>
