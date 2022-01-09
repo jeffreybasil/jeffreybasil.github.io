@@ -49,13 +49,16 @@
         text-align: justify;
       }
 
+      .formResponse {
+        text-align: center;
+      }
+
       button {
         background-color: #fdc57b;
         border: none;
         border-radius: 20px;
-        display: block;
+        margin-left: 10px;
         font-style: bold;
-        margin: auto;
         padding: 10px 20px;
       }
 
@@ -93,6 +96,34 @@
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </p>
-    <button>Learn more</button>
+    <p class="formResponse">
+      Is Jeffery Thirsty?
+      <input id="answer" type="text" />
+      <button id="submit">Submit</button>
+    </p>
+    <p id="thirstResponse"></p>
   </body>
+  <script>
+    function thirstTrap() {
+      let answer = document.querySelector("#answer");
+      let thirstResponse = document.querySelector("#thirstResponse");
+      let thirst = answer.value;
+
+      thirst = thirst.toLowerCase().trim();
+
+      if (thirst === "yes" || thirst === "yea") {
+        thirstResponse.innerHTML =
+          "Water him!! 👅 💦 They absorb water like sponges! ";
+      } else if (thirst === "no") {
+        thirstResponse.innerHTML =
+          "Liar!!! 😿 They absorb water like sponges! ";
+      } else {
+        answer.style.border = "1px solid red";
+        thirstResponse.innerHTML = "You didn't answer the question 😞";
+      }
+    }
+
+    let submit = document.querySelector("#submit");
+    submit.addEventListener("click", thirstTrap);
+  </script>
 </html>
