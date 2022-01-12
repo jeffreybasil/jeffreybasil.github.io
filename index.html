@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <style>
+      div {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
       h1 {
         color: #394a51;
         font-family: Merriweather;
@@ -45,9 +50,15 @@
         margin: 40px auto;
       }
       p {
-        max-width: 500px;
-        margin: 40px auto;
+        line-height: 1.25;
         text-align: justify;
+      }
+
+      .codedBy {
+        font: monospace;
+        font-size: 10px;
+        margin: 40px 0px;
+        text-align: center;
       }
 
       .formResponse {
@@ -101,55 +112,58 @@
     </style>
   </head>
   <body>
-    <h1>Jeffrey Basil</h1>
+    <div>
+      <h1>Jeffrey Basil</h1>
 
-    <h2>The baddest basil around</h2>
+      <h2>The baddest basil around</h2>
 
-    <ul class="menu-bar">
-      <li>About</li>
-      <li><a href="weather.html">Weather</a></li>
-      <li>Friends</li>
-    </ul>
-    <hr />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/686/original/ultimate-guide-to-growing-caring-for-harvesting-basil-plants.jpg?1641861962"
-    />
-    <p class="formResponse">Is Jeffery Thirsty?</p>
-    <p id="thirstResponse"></p>
-    <p>
-      <input id="answer" type="text" />
-      <button id="submit">Submit</button>
-    </p>
-    <p>
-      Jeffrey Basil - Absolute Unit. Looking out over the Hudson, soaking in the
-      sun, a bushy green plant dominates his sill. Known as the baddest basil
-      around, Jeffrey is secretly a softie. Skip watering him for one day and he
-      becomes so dramaticly wilted, you almost feel bad for the poor guy.
-      Dramatics aside Jeffrey has a great yield and has even fathered a youth.
-      New York born and raised.
-    </p>
-  </body>
-  <script>
-    function thirstTrap() {
-      let answer = document.querySelector("#answer");
-      let thirstResponse = document.querySelector("#thirstResponse");
-      let thirst = answer.value;
+      <ul class="menu-bar">
+        <li>About</li>
+        <li><a href="weather.html">Weather</a></li>
+        <li>Friends</li>
+      </ul>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/686/original/ultimate-guide-to-growing-caring-for-harvesting-basil-plants.jpg?1641861962"
+      />
+      <p class="formResponse">Is Jeffery Thirsty?</p>
+      <p id="thirstResponse"></p>
+      <p>
+        <input id="answer" type="text" />
+        <button id="submit">Submit</button>
+      </p>
+      <p>
+        Jeffrey Basil - Absolute Unit. Looking out over the Hudson, soaking in
+        the sun, a bushy green plant dominates his sill. Known as the baddest
+        basil around, Jeffrey is secretly a softie. Skip watering him for one
+        day and he becomes so dramaticly wilted, you almost feel bad for the
+        poor guy. Dramatics aside Jeffrey has a great yield and has even
+        fathered a youth. New York born and raised.
+      </p>
+      <p class="codedBy">Coded by JackieS.</p>
+    </div>
+    <script>
+      function thirstTrap() {
+        let answer = document.querySelector("#answer");
+        let thirstResponse = document.querySelector("#thirstResponse");
+        let thirst = answer.value;
 
-      thirst = thirst.toLowerCase().trim();
+        thirst = thirst.toLowerCase().trim();
 
-      if (thirst === "yes" || thirst === "yea") {
-        thirstResponse.innerHTML =
-          "Water him!! 👅 💦 He absorbs water like a sponge! ";
-      } else if (thirst === "no") {
-        thirstResponse.innerHTML =
-          "Liar!!! 😿 He absorbs water like a sponge! ";
-      } else {
-        answer.style.border = "1px solid red";
-        thirstResponse.innerHTML = "You didn't answer the question 😞";
+        if (thirst === "yes" || thirst === "yea") {
+          thirstResponse.innerHTML =
+            "Water him!! 👅 💦 He absorbs water like a sponge! ";
+        } else if (thirst === "no") {
+          thirstResponse.innerHTML =
+            "Liar!!! 😿 He absorbs water like a sponge! ";
+        } else {
+          answer.style.border = "1px solid red";
+          thirstResponse.innerHTML = "You didn't answer the question 😞";
+        }
       }
-    }
 
-    let submit = document.querySelector("#submit");
-    submit.addEventListener("click", thirstTrap);
-  </script>
+      let submit = document.querySelector("#submit");
+      submit.addEventListener("click", thirstTrap);
+    </script>
+  </body>
 </html>
