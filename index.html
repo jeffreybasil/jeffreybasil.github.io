@@ -39,6 +39,7 @@
       }
 
       img {
+        border-radius: 2px;
         display: block;
         width: 300px;
         margin: 40px auto;
@@ -51,15 +52,41 @@
 
       .formResponse {
         text-align: center;
+        margin-bottom: 0;
+      }
+
+      #thirstResponse {
+        text-align: center;
+        margin-top: 0px;
+      }
+
+      #answer {
+        display: block;
+        margin: 0 auto;
+      }
+
+      #submit {
+        display: block;
+        margin: 15px auto;
       }
 
       button {
-        background-color: #fdc57b;
-        border: none;
-        border-radius: 20px;
-        margin-left: 10px;
-        font-style: bold;
-        padding: 10px 20px;
+        color: #394a51;
+        background-color: #fbf2d5;
+        border: 2px solid #fbf2d5;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        font-weight: bold;
+        margin: 20px 0px;
+        padding: 10px;
+        transition: 0.2s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #7fa99b;
+        border-color: #7fa99b;
+        color: #fbf2d5;
       }
 
       a,
@@ -85,23 +112,22 @@
     </ul>
     <hr />
     <img
-      src="https://gbl-oned-cdn-prod.azureedge.net/-/media/fiskars/images/articles/gardening-and-yard-care/planting-and-prep/ultimate-guide-to-growing-caring-for-harvesting-basil-plants.ashx?rev=4b646eeeb6cb4ad1ae3a35340aa11ae9"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/686/original/ultimate-guide-to-growing-caring-for-harvesting-basil-plants.jpg?1641861962"
     />
+    <p class="formResponse">Is Jeffery Thirsty?</p>
+    <p id="thirstResponse"></p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
-    <p class="formResponse">
-      Is Jeffery Thirsty?
       <input id="answer" type="text" />
       <button id="submit">Submit</button>
     </p>
-    <p id="thirstResponse"></p>
+    <p>
+      Jeffrey Basil - Absolute Unit. Looking out over the Hudson, soaking in the
+      sun, a bushy green plant dominates his sill. Known as the baddest basil
+      around, Jeffrey is secretly a softie. Skip watering him for one day and he
+      becomes so dramaticly wilted, you almost feel bad for the poor guy.
+      Dramatics aside Jeffrey has a great yield and has even fathered a youth.
+      New York born and raised.
+    </p>
   </body>
   <script>
     function thirstTrap() {
@@ -113,10 +139,10 @@
 
       if (thirst === "yes" || thirst === "yea") {
         thirstResponse.innerHTML =
-          "Water him!! 👅 💦 They absorb water like sponges! ";
+          "Water him!! 👅 💦 He absorbs water like a sponge! ";
       } else if (thirst === "no") {
         thirstResponse.innerHTML =
-          "Liar!!! 😿 They absorb water like sponges! ";
+          "Liar!!! 😿 He absorbs water like a sponge! ";
       } else {
         answer.style.border = "1px solid red";
         thirstResponse.innerHTML = "You didn't answer the question 😞";
